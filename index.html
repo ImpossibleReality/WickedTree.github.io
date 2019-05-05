@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html>
+    <head><link rel="manifest" href="/manifest.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f8eae33b-7cc8-494e-b9f5-929f745bd6fe",
+    });
+  });
+</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+    <script><!-- PushAlert -->
+        <script type="text/javascript">
+                (function(d, t) {
+                        var g = d.createElement(t),
+                        s = d.getElementsByTagName(t)[0];
+                        g.src = "https://cdn.pushalert.co/integrate_f5074296335638470c29a5f3e73a5150.js";
+                        s.parentNode.insertBefore(g, s);
+                }(document, "script"));
+        </script>
+        <!-- End PushAlert --></script>
     <style>
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 html, body {
@@ -23,6 +44,9 @@ body {
     height: 60px;
     overflow: hidden;
     z-index: 10;
+    text-align: center;
+    font-size: 40px;
+    color: white;
 }
 .main {
     margin: 0 auto;
@@ -64,9 +88,9 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     padding: 20px;
-    cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     margin-left: 0px;
+    cursor: default;
 }
 .sidebarMenuInner a:hover{
     transition-duration: 0.1s;
@@ -77,6 +101,7 @@ body {
     display: block;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.50);
+    cursor: default;
 }
 .sidebarMenuInner li a{
     color: #fff;
@@ -88,7 +113,6 @@ body {
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
 }
-
 input[type=checkbox] {
     transition: all 0.3s;
     box-sizing: border-box;
@@ -153,7 +177,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-top: -9px;
 }
 </style>
-<div class="header"></div>
+<div class="header">WickedTree</div>
    <aside>
   <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
   <label for="openSidebarMenu" class="sidebarIconToggle">
