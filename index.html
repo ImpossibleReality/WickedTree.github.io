@@ -264,23 +264,22 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
             }
             .horizontal-scroll {
                 float: left;
-                width: 100px;
-                height: 97vw;
-                transform: rotate(-90deg) translateY(-100px);
+                margin-left: 5vw;
+                width: 500px;
+                height: 90vw;
+                transform: rotate(-90deg) translateY(-500px);
                 overflow-x: hidden;
                 overflow-y: scroll;
                 border: none;
                 transform-origin: right top;
-                 position: relative;
-                /* desired width */
-                margin: 5px;
+                position: relative;
                 background-attachment: fixed;
                 background: linear-gradient(145deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
                 border-radius: 6px
             }
             .Card {
-                height: 100px;
-                width: 100px;
+                height: 500px;
+                width: 500px;
                 background-color: transparent;
                 transform: rotate(90deg);
                 display:block;
@@ -290,12 +289,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
             }
             
 
-            .horizontal-scroll:before {
-                content: "";
-            display: block;
-            padding-top: 100%;
-            /* initial ratio of 1:1*/
-            }
 </style>
 <div style='font-family: 'Varela Round', sans-serif;' class="header">WickedTree</div>
    <aside>
@@ -315,9 +308,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   <div id='center' class="main center">
     <div class="mainInner">
         <br />
-        <h1 style='text-align: center'>WickedTree</h1>
+        <h1 style='text-align: center'>About Me</h1>
         <hr size='5px' width='50%' color='gray' style='border-radius: 5px;'/>
         <div class="Description"><br />I am an aspiring web developer that Likes to code Html, Css, and javascript. I am learning bash, and am working on a bash virus.</div><br />
+        <h1 style='text-align: center'>Projects:</h1>
+        <hr size='5px' width='50%' color='gray' style='border-radius: 5px;'/>
        <div class='horizontal-scroll'>
             <div class='Card'>1</div>
            <div class='Card'>2</div>
