@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <head><link rel="manifest" href="/manifest.json" />
+    <head>
+        <link rel="manifest" href="/manifest.json" />
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
   var OneSignal = window.OneSignal || [];
@@ -22,7 +23,22 @@
         </script>
         <!-- End PushAlert --></script>
     <style>
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+        .invisible {
+  transition: opacity 0.5s ease;
+  opacity: 0.0;
+}
+
+.visible {
+  transition: opacity 0.5s ease;
+  opacity: 1.0;
+}
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v11/w8gdH283Tvk__Lua32TysjIfp8uPLdshZg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 html, body {
     overflow-x: hidden;
     height: 100%;
@@ -55,15 +71,16 @@ body {
     margin-top: 60px;
 }
 .mainInner{
-    display: table;
+    display: block;
     height: 100%;
     width: 100%;
     text-align: center;
+    align-content: center;
+    justify-content: center;
 }
 .mainInner div{
-    display:table-cell;
+    display:inline-block;
     vertical-align: middle;
-    font-size: 3em;
     font-weight: bold;
     letter-spacing: 1.25px;
 }
@@ -80,6 +97,7 @@ body {
 	-webkit-animation: Gradient 5s ease infinite;
 	-moz-animation: Gradient 5s ease infinite;
     animation: Gradient 5s ease infinite;
+    z-index: 500;
 }
 .sidebarMenuInner{
     margin:0;
@@ -218,8 +236,68 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
         
     }
 }
+.Description {
+            font-size: 20px;
+            width: 30%;
+        }
+@media only screen and (max-width: 768px) {
+                /* For mobile phones: */
+                .horizontal scroll {
+            width: 100%;
+                    height: 100px;
+                    transform: none;
+                    overflow-x: scroll;
+                    overflow-y:  hidden;
+                        }
+                .Card {
+                    transform: none;
+                }
+            }
+            .container {
+                width: 100px;
+                overflow: hidden;
+                border: 5px solid black;
+                height: 100px;
+            }
+            .horizontal-scroll::-webkit-scrollbar {
+                display: none;
+            }
+            .horizontal-scroll {
+                float: left;
+                width: 100px;
+                height: 97vw;
+                transform: rotate(-90deg) translateY(-100px);
+                overflow-x: hidden;
+                overflow-y: scroll;
+                border: none;
+                transform-origin: right top;
+                 position: relative;
+                /* desired width */
+                margin: 5px;
+                background-attachment: fixed;
+                background: linear-gradient(145deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+                border-radius: 6px
+            }
+            .Card {
+                height: 100px;
+                width: 100px;
+                background-color: transparent;
+                transform: rotate(90deg);
+                display:block;
+                border-left: 2px solid rgba(0, 0, 0, 0.13);
+                text-align:center;
+                align-content: center;
+            }
+            
+
+            .horizontal-scroll:before {
+                content: "";
+            display: block;
+            padding-top: 100%;
+            /* initial ratio of 1:1*/
+            }
 </style>
-<div class="header">WickedTree</div>
+<div style='font-family: 'Varela Round', sans-serif;' class="header">WickedTree</div>
    <aside>
   <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
   <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -236,8 +314,36 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     </aside>
   <div id='center' class="main center">
     <div class="mainInner">
-        <h1>WickedTree</h1>
-        <hr size='5px' width='50%' color='gray' style='border-radius: 5px'/>
+        <br />
+        <h1 style='text-align: center'>WickedTree</h1>
+        <hr size='5px' width='50%' color='gray' style='border-radius: 5px;'/>
+        <div class="Description"><br />I am an aspiring web developer that Likes to code Html, Css, and javascript. I am learning bash, and am working on a bash virus.</div><br />
+       <div class='horizontal-scroll'>
+            <div class='Card'>1</div>
+           <div class='Card'>2</div>
+           <div class='Card'>3</div>
+           <div class='Card'>4</div>
+           <div class='Card'>5</div>
+           <div class='Card'>6</div>
+           <div class='Card'>1</div>
+           <div class='Card'>2</div>
+           <div class='Card'>3</div>
+           <div class='Card'>4</div>
+           <div class='Card'>5</div>
+           <div class='Card'>6</div>
+           <div class='Card'>1</div>
+           <div class='Card'>2</div>
+           <div class='Card'>3</div>
+           <div class='Card'>4</div>
+           <div class='Card'>5</div>
+           <div class='Card'>6</div>
+           <div class='Card'>1</div>
+           <div class='Card'>2</div>
+           <div class='Card'>3</div>
+           <div class='Card'>4</div>
+           <div class='Card'>5</div>
+           <div class='Card'>6</div>
+        </div>
     </div>
   </div>
 </html>
