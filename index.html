@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
   var OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
       appId: "6007f7ad-cc38-48de-962e-c93902207950",
+      notifyButton: {
+        enable: true,
+      },
     });
   });
 </script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
-    <script><!-- PushAlert -->
-        <script type="text/javascript">
-                (function(d, t) {
-                        var g = d.createElement(t),
-                        s = d.getElementsByTagName(t)[0];
-                        g.src = "https://cdn.pushalert.co/integrate_f5074296335638470c29a5f3e73a5150.js";
-                        s.parentNode.insertBefore(g, s);
-                }(document, "script"));
-        </script>
-        <!-- End PushAlert --></script>
     <style>
         .invisible {
   transition: opacity 0.5s ease;
