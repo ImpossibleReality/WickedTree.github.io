@@ -1,0 +1,1 @@
+Hello! This is just a rem-make of a project that I am currently working on (student portal V2)! It has images and an about page! I decided to use more modern ways of simple navigation through JS. Hope you like it!
